@@ -1,0 +1,55 @@
+{
+  "name": "bounc-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.1",
+    "mongodb": "^6.8.0",
+    "nodemailer": "^6.4.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-lazyload": "^3.2.1",
+    "react-router-dom": "^6.24.1",
+    "react-scripts": "^3.0.1",
+    "web-vitals": "^2.1.4",
+    "webpack-bundle-analyzer": "^4.10.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start-backend": "node backend/index.cjs",
+    "start-server": "node server.cjs"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "source-map-explorer": "^2.5.3"
+  }
+}

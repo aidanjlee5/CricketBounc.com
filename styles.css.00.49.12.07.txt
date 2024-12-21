@@ -1,0 +1,319 @@
+/* Define the custom font */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../fonts/BOUNC4.ttf') format('truetype');
+}
+
+/* Apply the custom font to the body or specific elements */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'CustomFont', Arial, sans-serif;
+  height: 100%; 
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #FFA500;
+  display: flex;
+  align-items: center; /* Align items vertically center */
+  justify-content: flex-start; /* Align items to the start */
+  padding: 10px 20px;
+  height: 100px; /* Set a fixed height for the header */
+  position: fixed; /* Fix the header to the top */
+  width: 100%; /* Ensure the header spans the full width */
+  top: 0; /* Fix the header to the top */
+  z-index: 1000; /* Ensure the header stays above other elements */
+}
+
+header img {
+  height: 180px; /* Increase the height to make the logo 1.5 times larger */
+  margin-right: 10px; /* Space between logo and title */
+  transform: translateY(10px); /* Shift logo down vertically */
+  /*transform: translateX(-40px); /* Shift logo down vertically */
+}
+
+header h1 {
+  font-size: 1.75em; /* Adjust the font size */
+  margin: 0; /* Remove default margin */
+  margin-right: 20px; /* Reduce space between title and navigation items */
+  white-space: nowrap; /* Prevent the title from wrapping to the next line */
+  transform: translateX(-20px);
+}
+
+header nav {
+  display: flex;
+  gap: 16px; /* Reduce gap between navigation items */
+  align-items: center; /* Align nav items vertically center */
+}
+
+header nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2em; /* Increase font size */
+  align-items: center;
+  /*transform: translateY(10px); /* Shift logo down vertically */
+}
+
+header .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+header .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 10px; /* Keep the margin to maintain the space */
+  pointer-events: none; /* Initially disable pointer events */
+}
+
+header .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+header .dropdown-content.about a {
+  background-color: rgb(161, 158, 158);
+  color: rgb(0, 0, 0);
+}
+
+header .dropdown-content.bcl a {
+  background-color: rgb(216, 110, 204);
+  color: rgb(7, 7, 7);
+}
+
+header .dropdown-content.burger-menu a {
+  background-color: rgb(253, 121, 121);
+  color: rgb(7, 7, 7);
+}
+
+header .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+header .dropdown:hover .dropdown-content,
+header .dropdown-content:hover {
+  display: block;
+  pointer-events: auto; /* Enable pointer events when visible */
+}
+
+header .dropdown:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%; /* Position it right below the dropdown */
+  left: 0;
+  width: 100%;
+  height: 10px; /* Height of the gap */
+  pointer-events: auto; /* Enable pointer events to keep it active */
+}
+
+header .dropdown-content:hover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px; /* Position it right above the dropdown content */
+  left: 0;
+  width: 100%;
+  height: 10px; /* Height of the gap */
+  pointer-events: auto; /* Enable pointer events to keep it active */
+}
+
+header .dropdown:hover .dropdown-content.about a:hover {
+  background-color: rgb(80, 80, 80);
+}
+
+header .dropdown:hover .dropdown-content.bcl a:hover {
+  background-color: rgb(180, 80, 180);
+}
+
+header .dropdown:hover .dropdown-content.burger-menu a:hover {
+  background-color: rgb(252, 74, 74);
+}
+
+/* Ensuring dropdown is fully visible on the screen */
+header .dropdown-content.burger-menu {
+  right: -14; /* Changed to right to ensure the dropdown appears within the viewport */
+}
+
+main {
+  padding-top: 0px; /* Add padding to the top to avoid overlap with fixed header */
+  height: calc(120vh - 120px); /* Ensure full viewport height minus header height */
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.section {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.section:nth-child(odd) {
+  background-color: #ADD8E6;
+}
+
+.section:nth-child(even) {
+  background-color: #90EE90;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-links div {
+  background-color: #FF6347;
+  padding: 10px;
+  margin: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Existing styles ... */
+
+.home-container {
+  text-align: center;
+  position: relative;
+  height: 250vh; /* Ensure the container takes at least the full height */
+  overflow: hidden; /* Prevent additional overflow */
+  padding-top: 0; /* Remove any additional padding that might add white space */
+}
+
+.background-image {
+  width: 100%;
+  height: calc(100vh - 120px); /* Full viewport height minus header height */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Ensure the icons are positioned relative to this container */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+h2 {
+  font-size: 2em;
+  padding-top: 120px;
+  margin-top: 30px;
+
+
+}
+
+/* New styles for the content below the background image */
+.content {
+  padding: 20px;
+  background-color: #f0f0f0;
+  flex-grow: 1;
+}
+
+.icon {
+  position: absolute;
+  /*width: 220px; Adjust size as necessary */
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.noble-franklin-riders {
+  top: 5%;
+  left: 5%;
+  width: 220px;
+}
+
+.blazing-ramses {
+  top: 5%;
+  left: 25%;
+  width: 220px;
+}
+
+.bcl-trophy {
+  top: 5%;
+  left: 43%;
+  width: 220px;
+  /*transform: translate(-50%, -50%);*/
+}
+
+.tar-heel-trojans {
+  top: 4%;
+  right: 22%;
+  width: 270px;
+}
+
+.sixer-jordans {
+  top: 5%;
+  right: 7%;
+  width: 250px;
+}
+
+.signup {
+  bottom: 5%;
+  left: 0%;
+  width: 800px;
+}
+
+.icon:hover {
+  transform: scale(1.08);
+}
+
+Styles for About Page 
+.about-container {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.about-background {
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Styles for BCL Page */
+.bcl-container {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bcl-background {
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Styles for Videos Page */
+.videos-container {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.videos-background {
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}

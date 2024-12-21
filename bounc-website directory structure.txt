@@ -1,0 +1,54 @@
+bounc-website/
+│   ├── backend/
+│   │   ├── node modules/
+│   │   ├── .env
+│   │   ├── index.cjs
+│   │   ├── package.json
+│   │   ├── yarn.lock
+├── node_modules/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Navbar.js
+│   │   ├── Home.js
+│   │   ├── About.js
+│   │   ├── BCL.js
+│   │   ├── Videos.js
+│   │   ├── BurgerMenu.js
+│   │   ├── styles.css
+│   │   ├── logo.png
+│   │   ├── VerifictionPopup.js
+│   │   ├── WelcomePopup.js
+│   │   ├── PasswordReset.js
+│   ├── pages/
+│   │   ├── Council.js
+│   │   ├── Motives.js
+│   │   ├── Constitution.js
+│   │   ├── Teams.js
+│   │   ├── Matches.js
+│   │   ├── SignUp.js
+│   │   ├── CricketRules.js
+│   │   ├── Gallery.js
+│   │   ├── Socials.js
+│   │   ├── FAQ.js
+│   │   ├── ContactUs.js
+│   │   ├── Supportbounc.js
+│   ├── fonts/
+│   │   ├── BOUNC4.ttf
+│   ├── images/│   │   ├── .env
+│   │   ├── background.webp
+│   │   ├── NobleFranklinRiders.webp
+│   │   ├── BlazingRamses.webp
+│   │   ├── BCLTrophy.webp
+│   │   ├── TarHeelTrojans.webp
+│   │   ├── 6ixerJ0rdans.webp
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   ├── index.css
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+├── package.json
+└── .gitignore
